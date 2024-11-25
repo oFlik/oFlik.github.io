@@ -1,7 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background-color: black;
 	color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	scroll-behavior: smooth;
+}
+
+.sections-frame {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+section {
+	height: 100vh;
+	scroll-snap-align: start;
+}
+
+.landing {
+	background-color: red;
+}
+
+.about {
+	background-color: blue;
+}
+
+.projects {
+	background-color: green;
+}
+
+.contact {
+	background-color: purple;
 }
