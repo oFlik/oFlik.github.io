@@ -1,18 +1,32 @@
 * {
 	margin: 0;
 	padding: 0;
+	text-decoration: none;
+}
+
+a {
+	color: white;
 }
 
 body {
-	background-color: black;
 	color: white;
-	scroll-behavior: smooth;
+
+	margin: auto;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	overflow: auto;
+	background: linear-gradient(315deg, #0f0c29 3%, #302b63 38%, #000 68%, #24243e 93%);
+	animation: gradient 30s ease infinite;
+	background-size: 400% 400%;
+	background-attachment: fixed;
 }
 
 .sections-frame {
 	scroll-snap-type: y mandatory;
 	overflow-y: scroll;
+	scroll-behavior: smooth;
 	height: 100vh;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 section {
@@ -21,10 +35,62 @@ section {
 }
 
 .landing {
-	background-color: red;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
 }
 
-.about {
+header {
+	flex: 0 1 auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 1rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.internal-links > * {
+	padding: 0 1rem;
+}
+
+.external-links > * {
+	padding: 0 0.5rem;
+}
+
+.landing-main {
+	flex: 1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.landing-main > * {
+	margin: 1rem 0;
+}
+
+.profile-image {
+	border-radius: 50%;
+	height: 12rem;
+}
+
+.name {
+	font-size: 3rem;
+}
+
+.brief-desciption {
+	font-size: 1.2rem;
+}
+
+.contact-icons {
+	display: flex;
+	justify-content: space-evenly;
+	width: 10rem;
+}
+
+/* .about {
 	background-color: blue;
 }
 
@@ -34,4 +100,16 @@ section {
 
 .contact {
 	background-color: purple;
+} */
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
 }
