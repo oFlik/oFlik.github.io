@@ -7,48 +7,58 @@
   <title>Thiago Pereira</title>
   <link rel="stylesheet" href="styles/style.css">
   <script src="https://kit.fontawesome.com/3cac2f29cf.js" crossorigin="anonymous"></script>
+  <script src="/scripts/scripts.js"></script>
 </head>
 
 <body>
   <main class="sections-frame">
 
-    <section id="landing" class="landing">
-      <header class="page-header">
-        <div class="internal-links">
-          <a href="#about">Sobre mim</a>
-          <a href="#projects">Projetos</a>
-          <a href="#contact">Contato</a>
-        </div>
-        <div class="external-links">
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-github"></i>
-        </div>
-      </header>
+    <header class="page-header">
+      <div class="internal-links">
+        <button onClick="goToElement('#landing')">Inicio</button>
+        <button onClick="goToElement('#experience')">Experiência</button>
+        <button onClick="goToElement('#projects')">Projetos</button>
+        <button onClick="goToElement('#contact')">Contato</button>
+      </div>
+      <div class="external-links">
+        <a href="https://www.linkedin.com/in/thiagopereira02/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/oFlik" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </header>
 
+    <section id="landing" class="landing">
       <main class="landing-main">
-        <img src="./images/kvothe.jpg" alt="Foto de perfil" class="profile-image">
-  
+        <img src="./images/profile.jpg" alt="Foto de perfil" class="profile-image">
+
         <div class="page-title">
           <p class="small-text">Muito prazer, me chamo</p>
-          <h1 class="name">Kvothe Ruh</h1>
+          <h1 class="name">Thiago Pereira</h1>
         </div>
-  
+
         <div class="brief-desciption">
-          <p>Desenvolvedor de soluções inteligentes para seu negócio!</p>
-          <p>Especialista em criação de Landing Pages e Web Apps.</p>
+          <p>Desenvolvedor de soluções inteligentes.</p>
+          <p>Especialista em criação de Web Apps.</p>
         </div>
 
         <div class="contact-icons">
-          <i class="fa-brands fa-whatsapp"></i>
-          <i class="fa-solid fa-envelope"></i>
-          <i class="fa-brands fa-discord"></i>
+          <a href="https://wa.me/5586995709563" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:thiagopereiradev@outlook.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.instagram.com/__th.ago/" target="_blank"><i class="fa-brands fa-instagram"></i></i></a>
         </div>
       </main>
-
+      <i id="arrow-down" class="fa-solid fa-arrow-down"></i>
     </section>
 
-    <section id="about" class="about">
-      <p>About</p>
+    <section id="experience" class="experience">
+
+      <main class="exp-main">
+
+        <h2 class="setion-title">Experiência profissional e acadêmica</h2>
+        
+
+
+      </main>
+
     </section>
 
     <section id="projects" class="projects">

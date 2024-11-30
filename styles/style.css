@@ -1,23 +1,19 @@
 * {
+	--landing-text-color: #e9f5db;
+	--landing-bg-color: #718355;
+	--header-bg-color: #d8f3dc;
+	--header-text-color: #081c15;
+
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
 }
 
-a {
-	color: white;
+body {
 }
 
-body {
-	color: white;
-
-	margin: auto;
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-	overflow: auto;
-	background: linear-gradient(315deg, #0f0c29 3%, #302b63 38%, #000 68%, #24243e 93%);
-	animation: gradient 30s ease infinite;
-	background-size: 400% 400%;
-	background-attachment: fixed;
+i {
+	color: var(--header-text-color);
 }
 
 .sections-frame {
@@ -29,9 +25,40 @@ body {
 	scrollbar-width: none;
 }
 
+header {
+	flex: 0 1 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.7rem 1rem;
+
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1vh;
+
+	border-radius: 4vmin;
+
+	background-color: var(--header-bg-color);
+
+	z-index: 5;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.internal-links > button {
+	background-color: var(--header-bg-color);
+	border: none;
+}
+
 section {
 	height: 100vh;
 	scroll-snap-align: start;
+	text-align: center;
+
+	display: flex;
 }
 
 .landing {
@@ -39,16 +66,27 @@ section {
 	flex-direction: column;
 	position: relative;
 
+	height: 90%;
+	background-color: #718355;
+	color: var(--landing-text-color);
+
+	margin: auto;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	overflow: auto;
+	background: linear-gradient(315deg, #1b4332 3%, #40916c 38%, #2d6a4f 68%, #1b4332 93%);
+	animation: gradient 30s ease infinite;
+	background-size: 400% 400%;
+	background-attachment: fixed;
 }
 
-header {
-	flex: 0 1 auto;
-	display: flex;
-	justify-content: space-between;
-	padding: 2rem 1rem;
-	position: absolute;
-	left: 0;
-	right: 0;
+.contact-icons > a > i {
+	color: var(--landing-text-color);
+}
+
+#arrow-down {
+	color: var(--landing-text-color);
+	margin-bottom: 3rem;
+	animation: updown 2s ease infinite;
 }
 
 .internal-links > * {
@@ -73,7 +111,8 @@ header {
 
 .profile-image {
 	border-radius: 50%;
-	height: 12rem;
+	height: 7rem;
+	border: solid 2px var(--landing-text-color);
 }
 
 .name {
@@ -112,4 +151,18 @@ header {
 	100% {
 		background-position: 0% 0%;
 	}
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
 }
